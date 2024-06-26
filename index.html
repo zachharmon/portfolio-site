@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zach Harmon</title>
+
+    <style>
+
+        :root {
+            --off-white: #e7e7e7;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--off-white);
+            display: flex;
+            flex-direction: row;
+        }
+
+        aside {
+            max-width: 400px;
+            height: calc(100vh - 80px);
+            background-color: #8660a5;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px 10px;
+            margin: 20px;
+        }
+
+        aside div{
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        aside div::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        aside div::-webkit-scrollbar-thumb {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        aside h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        aside h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        aside h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        aside p {
+            margin: 5px 10px;
+        }
+
+        aside ul {
+            margin: 5px 10px;
+        }
+
+        .breakline {
+            width: 98%;
+            height: 1px;
+            background-color: white;
+            margin: 10px auto;
+        }
+
+        .spacer {
+            height: 10px;
+        }
+
+        main {
+            width: calc(100% - 440px);
+            margin: 20px;
+            margin-top: 10px;
+        }
+
+        #links {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .link:hover {
+            transform: scale(1.05);
+        }
+
+        .link p {
+            margin: 0;
+        }
+
+        .link svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .link#linkedin {
+            background-color: #0077b5;
+            color: white;
+        }
+
+        .link#linkedin svg {
+            fill: white;
+        }
+
+        .link#github {
+            background-color: #333;
+            color: white;
+        }
+
+        .link#github svg {
+            fill: white;
+        }
+
+        .link#upwork {
+            background-color: #529139;
+            color: white;
+        }
+
+        .link#upwork svg {
+            fill: white;
+        }
+
+        .link#fiverr {
+            background-color: #1dbf73;
+            color: white;
+        }
+
+        .link#fiverr svg {
+            fill: white;
+        }
+
+        #projects {
+            width: calc(100% - 80px);
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(204, 228, 248);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            height: calc(100vh - 160px);
+            overflow: none
+        }
+
+        #projects #showcase::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        #projects #showcase::-webkit-scrollbar-thumb {
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        #projects h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        #showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        .project {
+            width: calc(100% - 40px);
+            min-height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+            color: black;
+        }
+
+        .project:hover {
+            transform: scale(.95);
+        }
+
+        .project h2 {
+            flex: 1;
+        }
+
+        .project p {
+            margin: 0;
+            flex: 2;
+        }
+
+        @media screen and (max-width: 800px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                margin: 10px;
+                margin-top: 10px;
+                width: calc(100% - 40px);
+                max-width: calc(100% - 40px);
+            }
+
+            main {
+                margin: 10px;
+                margin-top: 20px;
+                width: calc(100% - 20px);
+            }
+
+            #links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .link {
+                width: 100%;
+            }
+
+            #projects {
+                height: auto;
+                width: calc(100% - 40px);
+            }
+
+            #showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                width: calc(100% - 40px);
+            }
+            
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <aside>
+        <div>
+            <h1>Zach Harmon</h1>
+            <h3>Full Stack Developer</h3>
+
+            <div class="breakline"></div>
+
+            <h2>Education</h2>
+
+            <div class="spacer"></div>
+            
+            <h3>Murray State University (Grad. Dec 2023)</h3>
+            <p>BS in Computer Science</p>
+            <p>Minor in Computer Information Systems</p>
+            <p>Course Work Includes:</p>
+            <ul>
+                <li>Object Oriented Programming</li>
+                <li>Web Development</li>
+                <li>Database Management</li>
+                <li>Software Engineering</li>
+                <li>Git & Version Control</li>
+            </ul>
+
+            <div class="breakline"></div>
+
+            <h2>Experience</h2>
+
+            <div class="spacer"></div>
+
+            <h3>Marquette Transportation Company</h3>
+            <p>Developer</p>
+            <p>October 2023 - Present</p>
+            <p>
+                Developed, deployed, and maintained internal applications for the company.
+                Using various technologies such as Python, Flask, Django, React, React Native, C#, and SQL.
+                This includes (as of June 2024) over 30 web applications, 3 desktop applications, and 1 mobile application.
+            </p>
+
+            <div class="spacer"></div>
+
+            <h3>City of Henderson, KY</h3>
+            <p>IT Intern</p>
+            <p>Summer/Winter Breaks May 2022 - August 2023</p>
+            <p>
+                Developed and maintained multiple public facing and internal applications for the city.
+                This included the City of Henderson, KY mobile app where citizens could view news, events, bills, and council meeting recordings.
+                I also developed various other applications such as an inventory management system, an event scheduling/viewing system for the
+                Parks Department, and a system for programmatically filling out PDF forms via a custom API.
+            </p>
+
+            <div class="breakline"></div>
+
+            <h2>Certifications/Awards</h2>
+
+            <div class="spacer"></div>
+
+            <h3>MSU Computer Science Senior of the Year</h3>
+            <p>2023</p>
+
+            <div class="spacer"></div>
+
+            <h3>MSU ACM Member of the Year</h3>
+            <p>2023</p>
+
+            <div class="spacer"></div>
+
+            <h3>DeepLearning.AI Neural Networks and Deep Learning Certificate</h3>
+            <p>2024</p>
+        </div>
+    </aside>
+
+    <main>
+        
+        <div id="links">            
+            <a class="link" id="linkedin" target="_blank" href="https://www.linkedin.com/in/zacharywharmon/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                <p>LinkedIn</p>
+            </a>
+
+            <a class="link" id="github" target="_blank" href="https://github.com/zachharmon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                <p>GitHub</p>
+            </a>
+
+            <a class="link" id="upwork" target="_blank" href="https://www.upwork.com/freelancers/zharmon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 641 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M494.7 295.6c-50.3 0-83.5-38.9-92.8-53.9c11.9-95.3 46.8-125.4 92.8-125.4c45.5 0 80.9 36.4 80.9 89.7s-35.4 89.7-80.9 89.7zm0-237.8c-81.9 0-127.8 53.4-141 108.4c-14.9-28-25.9-65.5-34.5-100.3H206v141c0 51.1-23.3 89-68.8 89s-71.6-37.8-71.6-89l.5-141H.8v141c0 41.1 13.3 78.4 37.6 105.1c25 27.5 59.2 41.8 98.8 41.8c78.8 0 133.8-60.4 133.8-146.9V112.1c8.2 31.2 27.8 91.1 65.3 143.6l-35 199.4h66.4l23.1-141.3c7.6 6.3 15.7 12 24.2 17c22.2 14 47.7 21.9 73.9 22.8c0 0 4 .2 6.1 .2c81.2 0 145.9-62.9 145.9-147.8s-64.8-148.1-146-148.1z"/></svg>
+                <p>Upwork</p>
+            </a>
+
+            <a class="link" id="fiverr" target="_blank" href="https://www.fiverr.com/zach_harmon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="-2.5 -2 24 24"><g fill="currentColor"><path d="M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75z"/><circle cx="14.375" cy="1.875" r="1.875"/></g></svg>
+                <p>Fiverr</p>
+            </a>
+        </div>
+
+        <div id="projects">
+
+            <h1>
+                Check Out Some Demo Projects!
+            </h1>
+
+            <div class="spacer"></div>
+
+            <div id="showcase">
+
+                <a class="project">
+                    <h2>Web Resource Monitor</h2>
+                    <p>
+                        This is a demo project that I created to showcase my skills in API and DOM manipulation.
+                        It allows you to set up a list of websites or APIs to monitor and will alert you if any of them change.
+                    </p>
+                </a>
+
+                <a class="project">
+                    <h2>React Dijkstra's Algorithm</h2>
+                    <p>
+                        This project was meant to showcase my skills in React and algorithm implementation.
+                        It allows you to create a weighted, directed graph and then click on two nodes to find the shortest path between them.
+                    </p>
+                </a>
+
+
+                <a class="project">
+                    <h2>Tic Tac Toe</h2>
+                    <p>
+                        This project was meant to showcase my networking skills. It is a simple Tic Tac Toe game
+                        that has a single player mode against an AI, a local multiplayer mode, and an online multiplayer mode that
+                        uses WebSockets to communicate between players.
+                    </p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
