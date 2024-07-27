@@ -221,11 +221,13 @@
 
         .project h2 {
             flex: 1;
+            transition: opacity 0.8s;
         }
 
         .project p {
             margin: 0;
             flex: 2;
+            transition: opacity 0.8s;
         }
 
         .project img {
@@ -241,6 +243,10 @@
 
         .project:hover img {
             opacity: 1;
+        }
+
+        .project:hover p, .project:hover h2 {
+            opacity: 0;
         }
 
         @media screen and (max-width: 800px) {
