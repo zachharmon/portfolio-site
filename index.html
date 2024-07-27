@@ -8,7 +8,7 @@
     <style>
 
         :root {
-            --off-white: #e7e7e7;
+            --off-white: #f1faee;
         }
 
         body {
@@ -23,7 +23,7 @@
         aside {
             max-width: 400px;
             height: calc(100vh - 80px);
-            background-color: #8660a5;
+            background-color: #457b9d;
             border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
             color: white;
@@ -164,11 +164,12 @@
             margin: 0 auto;
             margin-top: 20px;
             padding: 20px;
-            background-color: rgb(204, 228, 248);
+            background-color: #3d405b;
             border-radius: 20px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             height: calc(100vh - 160px);
-            overflow: none
+            overflow: none;
+            color: white; 
         }
 
         #projects #showcase::-webkit-scrollbar {
@@ -196,7 +197,7 @@
         .project {
             width: calc(100% - 40px);
             min-height: 200px;
-            background-color: white;
+            background-color: #e5e5e5;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
             margin: 10px;
@@ -210,6 +211,8 @@
             user-select: none;
             text-decoration: none;
             color: black;
+            position: relative;
+            transition: scale 0.5s;
         }
 
         .project:hover {
@@ -223,6 +226,21 @@
         .project p {
             margin: 0;
             flex: 2;
+        }
+
+        .project img {
+            width: 99%;
+            height: auto;
+            position: absolute;
+            top: auto;
+            left: auto;
+            opacity: 0;
+            transition: opacity 0.8s;
+            max-height: 97%;
+        }
+
+        .project:hover img {
+            opacity: 1;
         }
 
         @media screen and (max-width: 800px) {
@@ -383,6 +401,7 @@
                         This is a demo project that I created to showcase my skills in API and DOM manipulation.
                         It allows you to set up a list of websites or APIs to monitor and will alert you if any of them change.
                     </p>
+                    <img src="./images/WebMonitor.PNG" alt="Web Resource Monitor Screenshot">
                 </a>
 
                 <a class="project" href="/tools/graph-tracing" target="_blank">
@@ -391,6 +410,7 @@
                         This project was meant to showcase my skills in React and algorithm implementation.
                         It allows you to create a weighted, directed graph and then click on two nodes to find the shortest path between them.
                     </p>
+                    <img src="./images/Dijkstras.PNG" alt="Dijkstra's Algorithm Screenshot">
                 </a>
 
 
@@ -401,6 +421,7 @@
                         that has a single player mode against an AI, a local multiplayer mode, and an online multiplayer mode that
                         uses WebSockets to communicate between players.
                     </p>
+                    <img src="./images/TicTacToe.PNG" alt="Tic Tac Toe Screenshot">
                 </a>
 
                 <a class="project" href="/tools/resume-builder" target="_blank">
@@ -410,6 +431,7 @@
                         by filling out a form and then generates a PDF of the resume. It also allows you to save and load resume drafts 
                         via a JSON format.
                     </p>
+                    <img src="./images/ResumeBuilder.PNG" alt="Resume Builder Screenshot">
                 </a>
 
             </div>
